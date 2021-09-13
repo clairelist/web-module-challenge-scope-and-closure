@@ -94,22 +94,25 @@ function finalScore(inning,numOfInnings){
  let homeScore=0;
  let awayScore=0;
 
- let finScore=[];
+ for (let i=0; i<numOfInnings; i++){
+  homeScore=homeScore+Math.floor(Math.random()*3);
 
+  awayScore=awayScore+Math.floor(Math.random()*3);
 
-  // let finScore=inning(numOfInnings); did not use this 
+}
 
-   homeScore=homeScore+inning;
-
-   awayScore=awayScore+inning;
-
-   
+ let finScore={
+  Home:homeScore,
+  Away:awayScore
   
- finScore.push([`Home: ${homeScore}` , `Away: ${awayScore}`]);
+};
+
  return finScore;
 }
 
 console.log(finalScore(inning(),9));
+
+
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:

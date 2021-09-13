@@ -89,15 +89,15 @@ Use the finalScore function below to do the following:
 
 
 
-function finalScore(inning,numOfInnings){
+function finalScore(inningCall,numOfInnings){
  
  let homeScore=0;
  let awayScore=0;
 
  for (let i=0; i<numOfInnings; i++){
-  homeScore=homeScore+Math.floor(Math.random()*3);
+  homeScore=homeScore+inningCall();
 
-  awayScore=awayScore+Math.floor(Math.random()*3);
+  awayScore=awayScore+inningCall();
 
 }
 
@@ -110,7 +110,7 @@ function finalScore(inning,numOfInnings){
  return finScore;
 }
 
-console.log(finalScore(inning(),9));
+console.log(finalScore(inning,9));
 
 
 

@@ -28,11 +28,15 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+    In counter1 the variable is declared inside the function scope, so we do not have access globally
+      to the var 'count'. In counter2 the var is declared in global scope so we do.
   
   2. Which of the two uses a closure? How can you tell?
+  counter1 because everything is within the same lexical enviro.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+     When we don't need access to the var vs when we do.
 */
 
 // counter1 code
@@ -62,10 +66,11 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+    return Math.floor(Math.random())*3;
 }
 
+//console.log(inning());
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
@@ -81,9 +86,29 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
+
+
+function finalScore(inning,numOfInnings){
+ 
+ let homeScore=0;
+ let awayScore=0;
+
+ let finScore=[];
+
+
+  // let finScore=inning(numOfInnings); did not use this 
+
+   homeScore=homeScore+inning;
+
+   awayScore=awayScore+inning;
+
+   
+  
+ finScore.push([`Home: ${homeScore} - Away: ${awayScore}`]);
+ return finScore;
 }
+
+console.log(finalScore(inning,9));
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:

@@ -59,6 +59,8 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+  Closure is when you call out to another function in code.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -80,8 +82,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+  Within the function itself, because we have multiple calls out to other objects (Math)
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+  The name does not change but the random num might.
 c. What is the lexical scope of `newRoll`? 
+  Function scope (only exists within the function)
 
 
 ### Task 3 - Stretch Goals
